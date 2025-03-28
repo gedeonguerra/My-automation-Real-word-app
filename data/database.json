@@ -76,15 +76,15 @@
       "modifiedAt": "2024-03-07T00:07:36.510Z"
     },
     {
-      "id": "echq3ERjJ",
-      "uuid": "7b4bf66d-ad81-45dd-b426-0801c14905ff",
+      "id": "KZcAujx0m",
+      "uuid": "998e65cf-ddeb-4256-a56c-0dd0adbe6919",
       "firstName": "First name test",
       "lastName": "Last name test",
       "username": "UserTest",
-      "password": "$2a$10$mdRdABefBPfxhVbr5fWXKeXaeOhd1a6RBrm5zj6XDEjfeSf5FMC.K",
+      "password": "$2a$10$9loEEfHwiZ3ysDSf0rStOOHSrt.di4b/qXWKLu6YxvW9.ciLvMoAy",
       "balance": 0,
-      "createdAt": "2025-03-24T18:47:56.011Z",
-      "modifiedAt": "2025-03-24T18:47:56.011Z"
+      "createdAt": "2025-03-28T17:33:44.432Z",
+      "modifiedAt": "2025-03-28T17:33:44.432Z"
     }
   ],
   "contacts": [
