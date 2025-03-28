@@ -1,8 +1,9 @@
 import userData from '../../fixtures/user-data.json'
 import LoginPage from '../../pages/login.Page'
-
+import HomePage from '../../pages/homePage'
 
 const loginPage = new LoginPage()
+const homePage = new HomePage()
 
 
 
@@ -11,7 +12,8 @@ describe('Login com sucesso RWA teste', () => {
       
       loginPage.accessLoginPage()
       loginPage.loginWithUser(userData.userSucess.username, userData.userSucess.password)
-      loginPage.checkHomePage()
+      homePage.checkHomePage()
+      
     })
   })
 

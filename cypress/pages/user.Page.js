@@ -8,7 +8,12 @@ class MyInfoPage {
             userNameField: "[name='username']",
             passwordField: "[name='password']",
             confirmPasswordField: "[name='confirmPassword']",
-            submitButton: "[type='submit']"
+            submitButton: "[type='submit']",
+            signUpPageGrid: ".SignUpForm-paper",
+            mensageError: "[aria-invalid='true']",
+            
+
+            
         }
         return selectors
     }
@@ -25,6 +30,38 @@ class MyInfoPage {
         cy.get(this.selectorsList().submitButton).click()
     }
 
+    fillPersonalDetailsIncomplete() {
+        cy.get(this.selectorsList().firstNameField).click()
+        
+        cy.get(this.selectorsList().lastNameField).click()
+        
+      
+
+    }
+
+    filRegistrationUserIncomplete() {
+        cy.get(this.selectorsList().userNameField).click()
+
+        cy.get(this.selectorsList().passwordField).click()
+
+        cy.get(this.selectorsList().confirmPasswordField).click()
+
+        cy.get('.SignUpForm-paper').click()
+
+        cy.get(this.selectorsList().mensageError).eq(0)
+        cy.get(this.selectorsList().mensageError).eq(1)
+        cy.get(this.selectorsList().mensageError).eq(2)
+        cy.get(this.selectorsList().mensageError).eq(3)
+        cy.get(this.selectorsList().mensageError).eq(4)
+    }
+
+    accessRegistrationPage() {
+        cy.visit('http://localhost:3000/signup')
+    }
+
+    checkSignUpPage() {
+        cy.get(this.selectorsList().signUpPageGrid).click()
+    }
 
 }
 export default MyInfoPage

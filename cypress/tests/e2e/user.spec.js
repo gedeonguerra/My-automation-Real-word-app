@@ -13,14 +13,24 @@ const myInfoPage = new MyInfoPage()
 
 describe('Registro de novo usuário com sucesso', () => {
     it('Deve registrar um novo usuário com informações válidas', () => {
-      loginPage.accessLoginPage()
-      cy.get('.css-13i4rnv-MuiGrid-root').click()
-      loginPage.checkSignUpPage()
+      myInfoPage.accessRegistrationPage()
+      myInfoPage.checkSignUpPage()
 
       myInfoPage.fillPersonalDetails('FirstName', 'LastName',)
       myInfoPage.filRegistrationUser('testingUser', 'Password', 'confirmPassword',)
-      myInfoPage
+      
 
+
+    })
+  })
+
+  describe('Tentar registrar um novo usuário com informações incompletas', () => {
+    it('Deve exibir mensagens de erro ao tentar registrar um novo usuário sem preencher todas as informações obrigatórias', () => {
+      myInfoPage.accessRegistrationPage()
+      myInfoPage.checkSignUpPage()
+      myInfoPage.fillPersonalDetailsIncomplete()
+      myInfoPage.filRegistrationUserIncomplete()
+      
 
     })
   })

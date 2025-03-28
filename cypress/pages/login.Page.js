@@ -8,8 +8,7 @@ class LoginPage {
         PasswordField: "[name='password']",
         loginButton: "[type='submit']",
         wrongCredentialAlert: "[role='alert']",
-        homePageGrid: "[data-test='user-onboarding-dialog-title']",
-        signUpPageGrid: ".SignUpForm-paper"
+        
 
         }
         return selectors 
@@ -19,6 +18,7 @@ class LoginPage {
         cy.visit('http://localhost:3000/signin')
     }
 
+
     loginWithUser(username, password) {
         cy.get(this.selectorsList().usernameField).type(username)
         cy.get(this.selectorsList().PasswordField).type(password)
@@ -26,16 +26,12 @@ class LoginPage {
     }
 
     checkAccessInvalid() {
-        cy.get(this.selectorsList().wrongCredentialAlert).click()
+        cy.get(this.selectorsList().wrongCredentialAlert)
     }
 
-    checkHomePage() {
-        cy.get(this.selectorsList().homePageGrid).click()
-    }
     
-    checkSignUpPage() {
-        cy.get(this.selectorsList().signUpPageGrid).click()
-    }
+    
+    
 }
 export default LoginPage
 
