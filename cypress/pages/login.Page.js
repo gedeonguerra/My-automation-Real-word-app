@@ -8,7 +8,8 @@ class LoginPage {
         PasswordField: "[name='password']",
         loginButton: "[type='submit']",
         wrongCredentialAlert: "[role='alert']",
-        homePageGrid: "[data-test='user-onboarding-dialog-title']"
+        homePageGrid: "[data-test='user-onboarding-dialog-title']",
+        signUpPageGrid: ".SignUpForm-paper"
 
         }
         return selectors 
@@ -32,6 +33,9 @@ class LoginPage {
         cy.get(this.selectorsList().homePageGrid).click()
     }
     
+    checkSignUpPage() {
+        cy.get(this.selectorsList().signUpPageGrid).click()
+    }
 }
 export default LoginPage
 
