@@ -52,5 +52,5 @@ amplifytools.xcconfig
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-# data
+#data
 data
