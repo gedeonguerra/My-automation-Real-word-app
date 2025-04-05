@@ -21,7 +21,7 @@ describe('Enviar dinheiro com saldo suficiente', () => {
   })
 
   describe('Enviar dinheiro com saldo insuficiente', () => {
-    it.only('Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente', () => {
+    it('Deve exibir mensagem de erro ao enviar dinheiro sem saldo suficiente', () => {
        
         loginPage.accessLoginPage()
         loginPage.loginWithUser(userData.userSucess.username, userData.userSucess.password)
