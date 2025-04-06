@@ -1,0 +1,5 @@
+.nyc_output/
+data/
+node_modules/
+src
+
